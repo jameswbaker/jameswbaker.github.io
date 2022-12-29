@@ -22,20 +22,20 @@ header {
 
 .background {
   position: absolute;
-  height: 115%;
+  height: 250%;
   width: 115%;
   object-fit: cover;
   z-index: -1;
-  transform: translateZ(-10px) scale(2);
+  transform: translateY(675px) translateZ(-10px) scale(2);
 }
 
 .foreground {
   position: absolute;
   height: 200%;
-  width: 100%;
+  width: 110%;
   object-fit: cover;
   z-index: -1;
-  transform: translateY(600px) translateZ(-5px) scale(1.5);
+  transform: translateY(500px) translateZ(-5px) scale(1.5);
 }
 
 .title {
@@ -43,8 +43,6 @@ header {
   color: white;
   text-shadow: 0 0 5px black;
   z-index: -1;
-
-  position: fixed;
 }
 
 section {

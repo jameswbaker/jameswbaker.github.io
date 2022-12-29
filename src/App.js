@@ -5,10 +5,32 @@ function App() {
     <div className="App">
       <div class="wrapper">
         <header>
-          <img src={require('./pics/background-removed/belevedere-PhotoRoom.png-PhotoRoom.png')} alt="Background" class="background"/>
-          <img src={require('./pics/background-removed/background_rm.png')} alt="Foreground" class="foreground"/>
-          <h1 class="title">JAMES BAKER</h1>
+          <img src={require('./pics/background-removed/belevedere-PhotoRoom.png-PhotoRoom.png')} alt="Foreground" class="foreground"/>
+          <img src={require('./pics/background-removed/background_rm.png')} alt="Background" class="background"/>
+          <div class="box">
+            <h1 class="title">JAMES BAKER</h1>
+          </div>
         </header>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
         <section>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
