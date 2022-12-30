@@ -1,6 +1,7 @@
 body {
   margin: 0;
   text-align: center;
+  background: #5F849E;
 }
 
 .wrapper {
@@ -10,20 +11,42 @@ body {
   perspective: 10px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
 
 nav {
   display: flex;
   width: 100%;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
+  background: #0A2342;
 }
 
 nav > .nav-section {
+  align-items: center;
+  justify-content: center;
   padding: 3rem 2rem;
   display: flex;
   gap: 1rem;
-  border-left: 1px solid black;
+  border-left: 1px solid white;
 }
 
+#nav-logo-section, #nav-menu-section {
+  flex-basis: calc(100% / 10);
+  font-size: 1.5rem;
+}
+
+#nav-social-section {
+  flex-grow: 2;
+  justify-content: flex-end;
+  gap: 3rem;
+  font-size: 1.5rem;
+}
 
 header {
   position: relative;
@@ -83,6 +106,10 @@ section {
   background-color: #333;
   color: white;
   height: 300%;
-  transform: translateY(200px)
+  transform: translateY(200px);
+}
+
+.logo {
+  height: 40px;
 }
 

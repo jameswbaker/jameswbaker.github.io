@@ -1,7 +1,7 @@
 import './App.css';
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faBarsStaggered, faBarsProgress } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
 
 function App() {
   return (
@@ -9,28 +9,24 @@ function App() {
       <div class="wrapper">
         
         <nav>
-          <div class="nav-menu-section">
-            <a href="#">
-              <FontAwesomeIcon icon="fa-solid fa-bars-sort" />
+          <div id="nav-logo-section" class="nav-section">
+            <img src={require('./pics/logo.jpeg')} alt="logo" class="logo"/>
+          </div>
+          <div id="nav-social-section" class="nav-section">
+            <a href="https://github.com/jameswbaker">
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a href='https://www.linkedin.com/in/james-baker-4694b7206/'>
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <a href="https://soundcloud.com/jameti">
+              <FontAwesomeIcon icon={faSoundcloud} />
             </a>
           </div>
-          <div class="nav-logo-section">
+          <div id="nav-menu-section" class="nav-section">
             <a href="#">
-              <FontAwesomeIcon icon="fa-sharp fa-solid fa-j" />
-
-              {/* THEN TRANSITION TO THIS WHEN YOU CLICK IT: <FontAwesomeIcon icon="fa-solid fa-bars-filter" /> */}
-
-            </a>
-          </div>
-          <div class="nav-social-section">
-            <a href="#">
-              <FontAwesomeIcon icon="fa-brands fa-github" />
-            </a>
-            <a href='#'>
-              <FontAwesomeIcon icon="fa-brands fa-linkedin-in" />
-            </a>
-            <a href="#">
-              <FontAwesomeIcon icon="fa-brands fa-soundcloud" />
+              <FontAwesomeIcon icon={faBars}/>
+              {/* add transition when clicked */}
             </a>
           </div>
         </nav>
