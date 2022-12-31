@@ -22,6 +22,7 @@ a {
 
 nav {
   display: flex;
+  height: 12.5%;
   width: 100%;
   border-bottom: 1px solid white;
   background: #0A2342;
@@ -33,12 +34,12 @@ nav > .nav-section {
   padding: 3rem 2rem;
   display: flex;
   gap: 1rem;
-  border-left: 1px solid white;
 }
 
 #nav-logo-section, #nav-menu-section {
   flex-basis: calc(100% / 10);
   font-size: 1.5rem;
+  border-left: 1px solid white;
 }
 
 #nav-social-section {
@@ -58,13 +59,31 @@ header {
   z-index: -2;
 }
 
+.backbackbackground {
+  position: absolute;
+  height: 120%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -3;
+  transform: translateY(-30px) translateZ(-20px) scale(3.2);
+}
+
+.backbackground {
+  position: absolute;
+  height: 120%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -3;
+  transform: translateZ(-15px) scale(2.6);
+}
+
 .background {
   position: absolute;
   height: 250%;
   width: 115%;
   object-fit: cover;
   z-index: -2;
-  transform: translateY(675px) translateZ(-10px) scale(2);
+  transform: translateY(625px) translateZ(-10px) scale(2);
 }
 
 .foreground {
@@ -79,7 +98,7 @@ header {
 .titles {
   margin: 0;
   position: sticky;
-  top: 35%;
+  top: 38%;
   z-index: -1;
 }
 
@@ -101,15 +120,21 @@ h1, h2 {
 }
 
 section {
+  border-top: 1px solid white;
   font-size: 2rem;
   padding: 2rem;
-  background-color: #333;
+  background-color: #0A2342;
   color: white;
   height: 300%;
-  transform: translateY(200px);
+  transform: translateY(300px);
+}
+
+.menu:hover {
+  icon: faBarsStaggered;
 }
 
 .logo {
-  height: 40px;
+  height: 65px;
+  
 }
 
