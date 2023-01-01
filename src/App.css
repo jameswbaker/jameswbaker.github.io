@@ -15,20 +15,22 @@ body {
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-
 nav {
   display: flex;
   height: 12.5%;
   width: 100%;
   border-bottom: 1px solid white;
   background: #0A2342;
+  z-index: 10;
 
   position: sticky;
-  top: -12.5%;
+  top: -10%;
+  transition-duration: 2s;
+}
+
+nav:hover {
+  transition-duration: 1s;
+  top: 0;
 }
 
 nav > .nav-section {
@@ -41,7 +43,6 @@ nav > .nav-section {
 
 #nav-logo-section, #nav-menu-section {
   flex-basis: calc(100% / 10);
-  font-size: 1.5rem;
   border-left: 1px solid white;
 }
 
@@ -49,11 +50,37 @@ nav > .nav-section {
   border-right: 1px solid white;
 }
 
+.menu:hover {
+  transition-duration: 0.3s;
+  color: #6286b3;
+  font-size: 3rem;
+}
+
 #nav-social-section {
   flex-grow: 2;
   justify-content: flex-end;
   gap: 3rem;
-  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 2.35rem;
+}
+
+.soundcloud:hover {
+  transition-duration: 0.3s;
+  color: #6286b3;
+}
+
+.linkedin:hover {
+  transition-duration: 0.3s;
+  color: #6286b3;
+}
+
+.github:hover {
+  transition-duration: 0.3s;
+  color: #6286b3;
 }
 
 header {
@@ -122,6 +149,8 @@ header {
 }
 
 .titles {
+  transition-duration: 1.0s;
+
   margin: 0;
   position: sticky;
   top: 38%;
@@ -134,18 +163,18 @@ h1, h2 {
 }
 
 .title {
-  font-size: 7rem;
+  font-size: 7.5rem;
   color: white;
   text-shadow: 0 0 5px black;
 }
 
 .subtitle {
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: white;
   text-shadow: 0 0 5px black;
 }
 
-section {
+.cover1 {
   border-top: 1px solid white;
   font-size: 2rem;
   padding: 2rem;
@@ -156,6 +185,6 @@ section {
 }
 
 .logo {
-  height: 65px;
+  height: 80px;
 }
 

@@ -13,18 +13,18 @@ function App() {
             <img src={require('./pics/logo2.png')} alt="logo" class="logo"/>
           </div>
           <div id="nav-social-section" class="nav-section">
-            <a href="https://soundcloud.com/jameti">
-              <FontAwesomeIcon icon={faSoundcloud} />
+            <a href="https://soundcloud.com/jameti" className="soundcloud">
+              <FontAwesomeIcon icon={faSoundcloud}/>
             </a>
-            <a href="https://github.com/jameswbaker">
-              <FontAwesomeIcon icon={faGithub} />
+            <a href="https://github.com/jameswbaker" className="github">
+              <FontAwesomeIcon icon={faGithub}/>
             </a>
-            <a href='https://www.linkedin.com/in/james-baker-4694b7206/'>
-              <FontAwesomeIcon icon={faLinkedinIn} />
+            <a href="https://www.linkedin.com/in/james-baker-4694b7206/" className="linkedin">
+              <FontAwesomeIcon icon={faLinkedinIn}/>
             </a>
           </div>
           <div id="nav-menu-section" class="nav-section">
-            <a href="menu">
+            <a href="menu" className="menu">
               <FontAwesomeIcon icon={faBars} />
               {/* add transition when clicked */}
             </a>
@@ -65,13 +65,10 @@ function App() {
         <br />
         <br />
 
-        <section>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
-          eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-          sunt in culpa qui officia deserunt mollit anim id est laborum...
+        <section className="cover1">
+          <section className="about">
+
+          </section>
         </section>
       </div>
     </div>

@@ -15,6 +15,10 @@ root.render(
     <Routes>
       <Route path="/" element={<App />}>
         <Route path="menu" element={<menu />}/>
+
+          {/* maybe remove routes!!!! */}
+
+
       </Route>
     </Routes>
   </BrowserRouter>
