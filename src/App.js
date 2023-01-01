@@ -25,7 +25,7 @@ function App() {
           </div>
           <div id="nav-menu-section" class="nav-section">
             <a href="#">
-              <FontAwesomeIcon icon={faBars} class="menu"/>
+              <FontAwesomeIcon icon={faBars} />
               {/* add transition when clicked */}
             </a>
           </div>
@@ -41,7 +41,10 @@ function App() {
           <img src={require('./pics/background-removed/rmbg.png')} alt="BackBackground" class="backbackground"/>
           <img src={require('./pics/background-removed/background_rm.png')} alt="Background" class="background"/>
           <img src={require('./pics/background-removed/belevedere-PhotoRoom.png-PhotoRoom.png')} alt="Foreground" class="foreground"/>
+          <img src={require('./pics/background-removed/belevedere_front.png')} alt="ForeForeground" class="foreforeground"/>
         </header>
+
+        <img src={require('./pics/snowy.gif')} class="snow"/>
 
         <br />
         <br />
