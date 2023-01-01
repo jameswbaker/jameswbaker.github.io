@@ -24,7 +24,7 @@ function App() {
             </a>
           </div>
           <div id="nav-menu-section" class="nav-section">
-            <a href="#">
+            <a href="menu">
               <FontAwesomeIcon icon={faBars} />
               {/* add transition when clicked */}
             </a>
