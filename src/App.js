@@ -66,10 +66,26 @@ function App() {
         <br />
 
         <section className="cover1">
-          <section className="about">
-
-          </section>
+          <div className="About" class="body-section">
+            About
+          </div>
+          <div className="Projects" class="body-section">
+            Projects
+          </div>
+          <div className="Resume" class="body-section">
+            Resume
+          </div>
+          <div className="Music" class="body-section">
+            Music     
+          </div>
+          <div classname="Photos" class="body-section">
+            Photos
+          </div>
+          <footer>
+            Hello this is a footer
+          </footer>
         </section>
+        
       </div>
     </div>
   );
