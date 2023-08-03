@@ -8,7 +8,7 @@ body {
   background: #5F849E;
 }
 
-.wrapper {
+#wrapper {
   height: 100vh;
   overflow-y: auto;
   overflow-x: clip;
@@ -28,7 +28,7 @@ nav {
   z-index: 10;
 
   position: sticky;
-  top: -9%;
+  top: 0;
   transition-duration: 1.5s;
 }
 
@@ -47,11 +47,10 @@ nav > .nav-section {
 
 #nav-logo-section, #nav-menu-section {
   flex-basis: calc(100% / 10);
-  border-left: 1px solid white;
 }
 
 #nav-menu-section {
-  border-right: 1px solid white;
+  border-left: 1px solid white;
 }
 
 .menu:hover {
@@ -142,22 +141,13 @@ header {
   transform: translateY(475px) translateZ(-3px) scale(1.5);
 }
 
-.snow {
-  position: absolute;
-  height: 250%;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
-  transform: translateX(-710px) translateY(-1000px);
-  opacity: 70%;
-}
-
 .titles {
   transition-duration: 1.0s;
   animation: pulse 5s infinite;
   position: relative;
   margin: 0;
   top: 25%;
+  z-index: -1;
 }
 
 @keyframes pulse {
@@ -228,12 +218,12 @@ h1, h2 {
   gap: 8%;
   position: relative;
   left: 74%;
-  transition-duration: 10s;
+  transition: 20s ease-out 5s;
 }
 
 .project_panes:hover {
   transform: translateX(-81%);
-  transition-duration: 10s;
+  transition: 20s ease-out;
 }
 
 .project_pane {
@@ -244,13 +234,14 @@ h1, h2 {
   height: 500px;
 }
 
+
 .project_pane:hover {
   transform: translateY(-20px);
   transition-duration: 0.3s 0.2s;
 }
 
 .project_description {
-
+  font-size: 15px;
 }
 
 #about-section {
@@ -287,15 +278,72 @@ h1, h2 {
   position: absolute;
 }
 
-#modal_menu {
-  height: 100%;
+#modal-menu {
+  height: 100vh;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item {
   color: white;
+  font-size: clamp(3rem, 8vw, 8rem);
+
+  display: block;
+  text-decoration: none;
+  padding: clamp(0.25rem, 0.5vw, 1rem) 0rem;
+  transition: opacity 400ms ease;
+}
+
+#modal-menu-items {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  margin-left: 58%;
+  position: relative;
+  top: 5%;
+  z-index: 2;
+}
 
-  transition: ease-in;
-  transition-duration: 5s;
+#modal-menu-items:hover > .menu-item {
+  opacity: 0.3;
+}
+
+#modal-menu-items:hover > .menu-item:hover {
+  opacity: 1;
+}
+
+#modal-menu-items:hover ~ #menu-background-pattern {
+  background-size: 230vmin 230vmin;
+  opacity: 0.2;
+}
+
+#menu-background-pattern {
+  height: 250vh;
+  width: 100vw;
+  opacity: 0.5;
+
+  background-image: url("./pics/snowy.gif");
+  background-position: 0% 0%;
+  background-size: 280vmin 280vmin;
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+
+  transition: opacity 800ms ease,
+    background-size 800ms ease;
+}
+
+#snow {
+  position: absolute;
+  height: 250%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transform: translateX(-710px) translateY(-1000px);
+  opacity: 70%;
 }
 
 .anchor {
