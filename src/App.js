@@ -1,12 +1,14 @@
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faBarsStaggered, faBarsProgress } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedinIn, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
+import { faGit, faGithub, faLinkedinIn, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
 import pdf from './resume.pdf';
 import footpic from './pics/Picture1.png';
 import React, { useState, useEffect } from 'react';
 import { Modal, Fade } from '@mui/material';
 import bg from './pics/stacked-waves-haikei (3).png';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 function App() {
   const [menuStaggered, setMenuStaggered] = useState(false);
@@ -16,7 +18,21 @@ function App() {
 
   function toggleMenu() {
     setMenuStaggered(!menuStaggered);
-  };        
+  };
+
+  const [leftPosition, setLeftPosition] = useState(74);
+
+  const moveLeft = () => {
+    if (leftPosition < 74) {
+      setLeftPosition((prevLeft) => prevLeft+49.2);
+    }
+  }
+
+  const moveRight = () => {
+    if (leftPosition > 74-49*(3)) {
+      setLeftPosition((prevLeft) => prevLeft-49.2)
+    }
+  }
 
   return (
     <div className="App">
@@ -70,7 +86,7 @@ function App() {
           </Modal>
         </nav>
 
-        <div id="home" class="anchor" style={{ position: "relative", top: "-500px"}}></div>
+        <div id="home" className="anchor" style={{ position: "relative", top: "-500px"}}></div>
 
         <div class="titles" style={{ filter: modalVisible ? "blur(5px)" : "none" }}>
           <h1 class="title">James Baker</h1>
@@ -135,27 +151,35 @@ function App() {
           <div style={{ height: '70px'}}></div>
           <div id="projects" class="anchor"></div>
           <div style={{ height: '80px'}}></div>
-          <img src={bg} style={{width: "100%", position: "absolute", left: "0", top: "25%", zIndex: "-1", height: "10%"}}></img>
+          <img src={bg} style={{width: "100%", position: "absolute", left: "0", top: "26%", zIndex: "-1", height: "10%"}}></img>
 
           <div className="Projects" class="body-section">
             <h3>Projects</h3>
 
             <div style={{ height: '20px'}}></div>
 
-            <div className="project_panes">
+            <div className="project_panes" style={{ left: `${leftPosition}%` }}>
               <div className="project_pane">
-                <h4>Merck QE Library</h4>
+                <a>
+                  <h4>Merck QE Library</h4>
+                </a>
+                
+                <img height="40%" width="75%"></img>
+                <br/>
                 
                 <div className="project_description">
-                Designed and developed a user-friendly library tool, employing a React frontend and 
-                leveraging AWS cloud resources (API Gateway, Lambda, DynamoDB) for centralized storage of widely 
-                used code snippets categorized by topic and title. Also created a user-centric Confluence landing page in close collaboration with stakeholders.
+                  Designed and developed a user-friendly library tool, employing a React frontend and 
+                  leveraging AWS cloud resources (API Gateway, Lambda, DynamoDB) for centralized storage of widely 
+                  used code snippets. Seperately created a user-centric Confluence landing page for the Quality Engineering team in close collaboration with stakeholders.
                 </div>
               </div>
               <div className="project_pane">
-                <h4>FindMeFood</h4>
+                <a href="https://github.com/PennSpark/sp23-blue-FindMeFood">
+                  <h4>FindMeFood</h4>  
+                </a>
 
-                <a href="https://github.com/PennSpark/sp23-blue-FindMeFood">CLICK 4 GITHUB</a>
+                <img height="40%" width="75%"></img>
+                <br/>
                 
                 <div className="project_description">
                 Led a 5-member software team in creating a mobile app for reviewing Food Trucks, featuring 
@@ -164,25 +188,29 @@ function App() {
                 </div>
               </div>
               <div className="project_pane">
-                <h4>ArXiv Dataset Analysis</h4>
+                <a href="https://github.com/jameswbaker/ArXivDatasetAnalysis">
+                  <h4>ArXiv Dataset Analysis</h4>
+                </a>
 
-                <a href="https://github.com/jameswbaker/ArXivDatasetAnalysis">CLICK 4 GITHUB</a>
+                <img height="40%" width="75%"></img>
+                <br/>
                 
                 <div className="project_description">
-                  <p>
-                    Analyzed a vast dataset of 500,000+ academic papers with preprocessing, EDA, and modeling. 
-                    Utilized Apache Spark's distributed BFS algorithm on a constructed graph to study connections 
-                    between collaborating authors, discovering distinct subgraphs and cliques.
-                  </p>
+                  Analyzed a vast dataset of 500,000+ academic papers with preprocessing, EDA, and modeling. 
+                  Utilized Apache Spark's distributed BFS algorithm on a constructed graph to study connections 
+                  between collaborating authors. Discovered distinct subgraphs and cliques.
                 </div>
               </div>
               <div className="project_pane">
-                <h4>FT Tuner</h4>
+                <a href="https://github.com/jameswbaker/FT-Tuner">
+                  <h4>FT Tuner</h4>
+                </a>
 
-                <a href="https://github.com/jameswbaker/FT-Tuner">CLICK 4 GITHUB</a>
+                <img height="40%" width="75%"></img>
+                <br/>
                 
                 <div className="project_description">
-                  description
+                  Digital tuner coded up in Python using the Fourier Transform algorithm. Accuracy and runtime analysis performed on different input sounds.
                 </div>
               </div>
             </div>
@@ -190,8 +218,8 @@ function App() {
             <div style={{ height: '20px'}}></div>
 
             <div id="btns_container" class="anchor">
-              <button>L</button>
-              <button>R</button>
+              <ArrowBackIosIcon style={{ display: (leftPosition < 74 ? "block" : "none"), position: "absolute", left: "25%", top: "30%", fontSize: "50px", opacity: "50%", transition: "0.5s ease" }} onClick={moveLeft} onMouseEnter={(e) => e.target.style.opacity = "100%"} onMouseLeave={(e) => e.target.style.opacity = "50%"}/>
+              <ArrowForwardIosIcon style={{ display: (leftPosition > 74-49*(3) ? "block" : "none"), position: "absolute", right: "25%", top: "30%", fontSize: "50px", opacity: "50%", transition: "0.5s ease" }} onClick={moveRight} onMouseEnter={(e) => e.target.style.opacity = "100%"} onMouseLeave={(e) => e.target.style.opacity = "50%"}/>
             </div>
           </div>
 
