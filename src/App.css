@@ -134,11 +134,11 @@ header {
 
 .foreforeground {
   position: absolute;
-  height: 110%;
+  height: 180%;
   width: 100%;
   object-fit: cover;
   z-index: -1;
-  transform: translateY(475px) translateZ(-3px) scale(1.5);
+  transform: translateY(30%) translateZ(-3px) scale(1.5);
 }
 
 .titles {
@@ -248,7 +248,11 @@ h4:hover {
 }
 
 .project_description {
-  font-size: 16px;
+  font-size: 2vh;
+  padding: 0px 3vw 3vw 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #about-section {
@@ -256,7 +260,7 @@ h4:hover {
   width: 70%;
   border-radius: 10px;
   height: 70vh;
-  padding: 45px 70px 45px 70px;
+  padding: 45px 70px 70px 70px;
   display: flex;
   text-align: left;
   gap: 50px;
@@ -264,7 +268,7 @@ h4:hover {
 }
 
 #about-subtext {
-  font-size: calc(1.8vw);
+  font-size: calc(1.5vw);
 }
 
 #pfp {

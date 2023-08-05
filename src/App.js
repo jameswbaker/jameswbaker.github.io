@@ -20,16 +20,18 @@ function App() {
     setMenuStaggered(!menuStaggered);
   };
 
-  const [leftPosition, setLeftPosition] = useState(74);
+  const initLeft = 74+25;
+
+  const [leftPosition, setLeftPosition] = useState(initLeft);
 
   const moveLeft = () => {
-    if (leftPosition < 74) {
+    if (leftPosition < initLeft) {
       setLeftPosition((prevLeft) => prevLeft+49);
     }
   }
 
   const moveRight = () => {
-    if (leftPosition > 74-49*(3)) {
+    if (leftPosition > initLeft-49*(4)) {
       setLeftPosition((prevLeft) => prevLeft-49)
     }
   }
@@ -146,10 +148,10 @@ function App() {
                 <h3>About</h3>
                 <div id="about-subtext">
                   <p>
-                    I'm a rising third year at the University of Pennsylvania.
+                    I'm a rising third year at the University of Pennsylvania School of Engineering.
                   </p>
                   <p>
-                    I'm still figuring out exactly what I want to do and pursuing all things that interest me!
+                    I enjoy listening and producing electronic music, lifting, and teaching. I am also a freelance DJ who has been hired to multiple events.
                   </p>
                   <p>
                     Right now, I'm interested in math, software development, data science, and UI/UX.
@@ -178,13 +180,13 @@ function App() {
                   <h4>Merck QE Library</h4>
                 </a>
                 
-                <img src={require("./pics/merck.jpg")} height="40%" width="75%"></img>
+                <img src={require("./pics/merck.jpg")} height="180vh" width="75%"></img>
                 <br/>
                 
                 <div className="project_description">
                   Designed and developed a user-friendly library tool, employing a React frontend and 
                   leveraging AWS cloud resources (API Gateway, Lambda, DynamoDB) for centralized storage of widely 
-                  used code snippets. Seperately created a user-centric Confluence landing page for the Quality Engineering team in close collaboration with stakeholders.
+                  used code snippets. Seperately created a user-centric Confluence landing page for the Quality Engineering team.
                 </div>
               </div>
               <div className="project_pane">
@@ -192,7 +194,7 @@ function App() {
                   <h4>FindMeFood</h4>  
                 </a>
 
-                <video height="40%" width="75%" controls><source src={require("./gifs/findmefood_demo.mp4")} type="video/mp4"></source></video>
+                <video height="180vh" width="75%" controls><source src={require("./gifs/findmefood_demo.mp4")} type="video/mp4"></source></video>
                 <br/>
                 
                 <div className="project_description">
@@ -206,13 +208,15 @@ function App() {
                   <h4>ArXiv Dataset Analysis</h4>
                 </a>
 
-                <video height="40%" width="75%" controls><source src={require("./gifs/arxiv_demo.mov")} type="video/mp4"></source></video>
+                <video height="180vh" width="75%" controls><source src={require("./gifs/arxiv_demo.mov")} type="video/mp4"></source></video>
                 <br/>
                 
                 <div className="project_description">
                   Analyzed a vast dataset of 500,000+ academic papers with preprocessing, EDA, and modeling. 
                   Utilized Apache Spark's distributed BFS algorithm on a constructed graph to study connections 
-                  between collaborating authors. Discovered distinct subgraphs and cliques.
+                  between collaborating authors.
+
+                  Collaborators: Taha Boty, Rohan Gupta.
                 </div>
               </div>
               <div className="project_pane">
@@ -220,11 +224,25 @@ function App() {
                   <h4>FT Tuner</h4>
                 </a>
 
-                <img src={require("./gifs/1cd8bf8e5962c76991366a2e9c611aa7.png")} height="40%" width="75%"></img>
+                <img src={require("./gifs/1cd8bf8e5962c76991366a2e9c611aa7.png")} height="180vh" width="75%"></img>
                 <br/>
                 
                 <div className="project_description">
                   Digital tuner coded up in Python using the Fourier Transform algorithm. Accuracy and runtime analysis performed on different input sounds.
+                  Collaborators: Gabe Smith.
+                </div>
+              </div>
+              <div className="project_pane">
+                <a href="https://github.com/Tbot101/CIS-5190-Project">
+                  <h4>NLP ML Evaluation</h4>
+                </a>
+
+                <img src={require("./pics/0610a92ab840eeb46904aa461f4203b4.png")} height="180vh" width="75%"></img>
+                <br/>
+                
+                <div className="project_description">
+                  Tested variety of machine learning models including Logistic Regression, Feedforward Neural Network, and BERT on a food review dataset. Analyzed capabilities and shortcomings between different models. Observed under different dataset shifts.
+                  Collaborators: Taha Boty, Vikram Singh.
                 </div>
               </div>
               
