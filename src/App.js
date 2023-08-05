@@ -24,14 +24,19 @@ function App() {
 
   const moveLeft = () => {
     if (leftPosition < 74) {
-      setLeftPosition((prevLeft) => prevLeft+49.2);
+      setLeftPosition((prevLeft) => prevLeft+49);
     }
   }
 
   const moveRight = () => {
     if (leftPosition > 74-49*(3)) {
-      setLeftPosition((prevLeft) => prevLeft-49.2)
+      setLeftPosition((prevLeft) => prevLeft-49)
     }
+  }
+
+  const activateMenu = () => {
+    toggleMenu();
+    setModalVisible(true);
   }
 
   return (
@@ -58,7 +63,7 @@ function App() {
           </div>
           <div id="nav-menu-section" class="nav-section">
             <a className="menu">
-              <FontAwesomeIcon icon={faBars} style={{ display: menuStaggered ? 'none' : 'flex'}} onMouseEnter={toggleMenu}/>
+              <FontAwesomeIcon icon={faBars} style={{ display: menuStaggered ? 'none' : 'flex'}} onMouseEnter={activateMenu}/>
               <FontAwesomeIcon icon={faBarsStaggered} style={{ display: !menuStaggered ? 'none' : 'flex'}} onMouseLeave={toggleMenu} onClick={(e) => setModalVisible(!modalVisible)}/>
               {/* add transition when clicked */}
             </a>
@@ -125,6 +130,15 @@ function App() {
         <section className="cover1" style={filterBlurDimBG}>
           <div id="about" class="anchor"></div>
           <div style={{ height: '170px'}}></div>
+
+          {/*
+          <img id="glimmer1" src={require("./gifs/frame_02_delay-0.03s.gif")}></img>
+          <img id="glimmer2" src={require("./gifs/frame_02_delay-0.03s.gif")}></img>
+          <img id="glimmer3" src={require("./gifs/frame_02_delay-0.03s.gif")}></img>
+          <img id="glimmer4" src={require("./gifs/frame_02_delay-0.03s.gif")}></img>
+          <img id="glimmer5" src={require("./gifs/frame_02_delay-0.03s.gif")}></img>
+          <img id="glimmer6" src={require("./gifs/frame_02_delay-0.03s.gif")}></img>
+          */}
           
           <div className="About" class="body-section">
             <div id="about-section">
@@ -151,20 +165,20 @@ function App() {
           <div style={{ height: '70px'}}></div>
           <div id="projects" class="anchor"></div>
           <div style={{ height: '80px'}}></div>
-          <img src={bg} style={{width: "100%", position: "absolute", left: "0", top: "26%", zIndex: "-1", height: "10%"}}></img>
+          <img src={bg} style={{width: "100%", position: "absolute", left: "0", top: "140vh", zIndex: "-1", height: "10%"}}></img>
 
           <div className="Projects" class="body-section">
             <h3>Projects</h3>
 
             <div style={{ height: '20px'}}></div>
 
-            <div className="project_panes" style={{ left: `${leftPosition}%` }}>
+            <div className="project_panes" style={{ left: `calc(${leftPosition}%)` }}>
               <div className="project_pane">
                 <a>
                   <h4>Merck QE Library</h4>
                 </a>
                 
-                <img height="40%" width="75%"></img>
+                <img src={require("./pics/merck.jpg")} height="40%" width="75%"></img>
                 <br/>
                 
                 <div className="project_description">
@@ -178,12 +192,12 @@ function App() {
                   <h4>FindMeFood</h4>  
                 </a>
 
-                <img height="40%" width="75%"></img>
+                <video height="40%" width="75%" controls><source src={require("./gifs/findmefood_demo.mp4")} type="video/mp4"></source></video>
                 <br/>
                 
                 <div className="project_description">
                 Led a 5-member software team in creating a mobile app for reviewing Food Trucks, featuring 
-                15 local Philadelphia trucks. Incorporated React Native, Maps support, Axios, REST API endpoints, and Django database. 
+                4+ local Philadelphia trucks that could be quickly scaled to more. Incorporated React Native, Maps support, Axios, REST API endpoints, and Django database. 
                 The project won Best Division Project of the semester. 
                 </div>
               </div>
@@ -192,7 +206,7 @@ function App() {
                   <h4>ArXiv Dataset Analysis</h4>
                 </a>
 
-                <img height="40%" width="75%"></img>
+                <video height="40%" width="75%" controls><source src={require("./gifs/arxiv_demo.mov")} type="video/mp4"></source></video>
                 <br/>
                 
                 <div className="project_description">
@@ -206,13 +220,14 @@ function App() {
                   <h4>FT Tuner</h4>
                 </a>
 
-                <img height="40%" width="75%"></img>
+                <img src={require("./gifs/1cd8bf8e5962c76991366a2e9c611aa7.png")} height="40%" width="75%"></img>
                 <br/>
                 
                 <div className="project_description">
                   Digital tuner coded up in Python using the Fourier Transform algorithm. Accuracy and runtime analysis performed on different input sounds.
                 </div>
               </div>
+              
             </div>
 
             <div style={{ height: '20px'}}></div>
@@ -231,12 +246,12 @@ function App() {
             <h3>Resume</h3>
 
             <div>
-              <iframe src={pdf+"#zoom=90%"} width="764px" height="1024px"/>
+              <iframe src={pdf+"#zoom="+"max(10vw, 10vh)"+"%"} width="764vw" height="1024vh"/>
             </div>
           </div>
 
           <p style={{position: "absolute", bottom: "3%", fontSize:"20px", right: "10%" }}>
-            photo credits @ isola2000.com
+            illustration credits @ isola2000.com
           </p>
           <p style={{position: "absolute", bottom: "2%", fontSize:"20px", right: "10%" }}>
             website designed and developed by james baker
