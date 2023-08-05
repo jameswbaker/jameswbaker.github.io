@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c2be0ded.css",
-    "main.js": "/static/js/main.b4d3154c.js",
+    "main.css": "/static/css/main.ebf1e94c.css",
+    "main.js": "/static/js/main.4599ff7d.js",
     "static/media/arxiv_demo.mov": "/static/media/arxiv_demo.2dc34f9e27ca03896452.mov",
     "static/media/findmefood_demo.mp4": "/static/media/findmefood_demo.2dabe565063f5b126f7a.mp4",
     "static/media/background_rm.png": "/static/media/background_rm.842f893b0508e78834e1.png",
@@ -18,11 +18,11 @@
     "static/media/logo2.png": "/static/media/logo2.fe22a04065b604ca88b7.png",
     "static/media/Picture1.png": "/static/media/Picture1.6f553fb9a204e3aeb52c.png",
     "index.html": "/index.html",
-    "main.c2be0ded.css.map": "/static/css/main.c2be0ded.css.map",
-    "main.b4d3154c.js.map": "/static/js/main.b4d3154c.js.map"
+    "main.ebf1e94c.css.map": "/static/css/main.ebf1e94c.css.map",
+    "main.4599ff7d.js.map": "/static/js/main.4599ff7d.js.map"
   },
   "entrypoints": [
-    "static/css/main.c2be0ded.css",
-    "static/js/main.b4d3154c.js"
+    "static/css/main.ebf1e94c.css",
+    "static/js/main.4599ff7d.js"
   ]
 }
