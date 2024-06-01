@@ -142,8 +142,7 @@ header {
 }
 
 .titles {
-  transition-duration: 1.0s;
-  animation: pulse 5s infinite;
+  
   position: relative;
   margin: 0;
   top: 25%;
@@ -170,15 +169,22 @@ h1, h2 {
 }
 
 .title {
-  font-size: 8rem;
+  transition-duration: 1.0s;
+  animation: pulse 5s infinite;
+  font-size: 8.5rem;
   color: white;
   text-shadow: 0 0 5px black;
 }
 
 .subtitle {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: white;
   text-shadow: 0 0 5px black;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  padding-left: 25%;
+  padding-right: 25%;
 }
 
 .cover1 {
@@ -257,10 +263,10 @@ h4:hover {
 
 #about-section {
   background-color: #6384a4;
-  width: 70%;
+  width: 80%;
   border-radius: 10px;
-  height: 70vh;
-  padding: 45px 70px 70px 70px;
+  
+  padding: 40px 70px 40px 70px;
   display: flex;
   text-align: left;
   gap: 50px;
@@ -331,7 +337,7 @@ h4:hover {
 }
 
 #menu-background-pattern {
-  height: 250vh;
+  height: 255vh;
   width: 100vw;
   opacity: 0.5;
 

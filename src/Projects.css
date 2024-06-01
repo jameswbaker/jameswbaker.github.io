@@ -1,0 +1,23 @@
+.projects_array {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 3vw;
+
+}
+
+/* .project_card {
+    height: 400px;
+    width: 400px
+} */
+
+.icons {
+    padding-top: 20px;
+    height: 60px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
