@@ -2,7 +2,7 @@ import React from 'react';
 
 import ProjectCard from './ProjectCard';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faFigma } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faFigma, faChrome } from "@fortawesome/free-brands-svg-icons";
 
 import squishModelVideo from './videos/SquishModel2.mp4';
 import miniMinecraft from './videos/MiniMinecraft2.mp4';
@@ -10,6 +10,9 @@ import merck from './videos/merck.mp4';
 import arxivDataset from './videos/arxiv_demo.mov';
 import findMeFood from './videos/findmefood_demo.mp4';
 import designCaseStudy from './videos/design.mp4';
+import compiler from './videos/compiler.mp4';
+import digitalTuner from './videos/tuner.mp4';
+import ml from "./videos/ml.mp4";
 
 import './Projects.css';
 
@@ -54,6 +57,22 @@ function Projects() {
                         </div>
                     }
                     playable={true}
+                />
+                <ProjectCard
+                    name="Oat Language Compiler"
+                    image={compiler}
+                    title="Oat Language Compiler"
+                    role="Student Developer"
+                    description="Coded compiler in OCaml: compilation of Oat language to x86Lite. Implemented lexer, parser, type checker, frontend, x86Lite backend. Support Structs, Function Pointers, Built-in Functions, Null References. Wrote Kempe's graph coloring dataflow algorithm for dataflow analyses: dead code elimination, liveness, register allocation. Collaborator: Paul Loh."
+                    duration="January 2024 - April 2024"
+                    icons={
+                        <div className="icons">
+                            <a href="https://github.com/upenn-cis3410/hw6-optimizations-spork.git" className="github" target="_blank">
+                                <FontAwesomeIcon icon={faGithub} style={{ color: "black" }} />
+                            </a>
+                        </div>
+                    }
+                    playable={false}
                 />
                 <ProjectCard
                     name="Merck Quality Engineering Library"
@@ -103,6 +122,26 @@ function Projects() {
                     playable={false}
                 />
                 <ProjectCard
+                    name="Amazon Food Review ML Analysis"
+                    image={ml}
+                    title="Amazon Food Review ML Analysis"
+                    role="Developer (Logistic Regression, Neural Network)"
+                    description="Used models to predict sentiment of food reviews to 90% accuracy. Applied Logistic regression models measured by accuracy, F1 Score (based on precision and recall). Varyied regularization levels, text analyzation methods (text vectorization, TF-IDF, n-grams. Collaborators: Vikram Singh, Taha Boty. Full paper included via Chrome button."
+                    duration="March 2023 - April 2023"
+                    icons={
+                        <div className="icons">
+                            <a href="https://github.com/Tbot101/CIS-5190-Project" className="github" target="_blank">
+                                <FontAwesomeIcon icon={faGithub} style={{ color: "black" }} />
+                            </a>
+                            <a href="https://drive.google.com/file/d/13cKGA6bAUgHcJ_fSEqVJzKcSZHgkkC8C/view?usp=sharing"
+                             className="pdf" target="_blank">
+                                <FontAwesomeIcon icon={faChrome} style={{ color: "black" }} />
+                             </a>
+                        </div>
+                    }
+                    playable={false}
+                />
+                <ProjectCard
                     name="Find Me Food"
                     image={findMeFood}
                     title="Find Me Food"
@@ -117,6 +156,22 @@ function Projects() {
                         </div>
                     }
                     playable={true}
+                />
+                <ProjectCard
+                    name="Digital Tuner"
+                    image={digitalTuner}
+                    title="Digital Tuner"
+                    role="Developer"
+                    description="Digital tuner to read the pitch of an input sound using the Discrete Fourier Transform and Fast Fourier Transform. Analysis on accuracy and runtime on different sounds. With collaborator Gabe Smith. Technologies: Python, NumPy, Matplotlib."
+                    duration="March 2023 - April 2023"
+                    icons={
+                        <div className="icons">
+                            <a href="https://github.com/jameswbaker/FT-Tuner.git" className="github" target="_blank">
+                                <FontAwesomeIcon icon={faGithub} style={{ color: "black" }} />
+                            </a>
+                        </div>
+                    }
+                    playable={false}
                 />
             </div>
         </div>
