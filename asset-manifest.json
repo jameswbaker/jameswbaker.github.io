@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2bea7868.css",
+    "main.js": "/static/js/main.c296e7d3.js",
+    "static/media/MiniMinecraft2.mp4": "/static/media/MiniMinecraft2.9db8afb18d6f43b66e52.mp4",
+    "static/media/SquishModel2.mp4": "/static/media/SquishModel2.46894f89822a98ae216f.mp4",
+    "static/media/arxiv_demo.mov": "/static/media/arxiv_demo.2dc34f9e27ca03896452.mov",
+    "static/media/findmefood_demo.mp4": "/static/media/findmefood_demo.2dabe565063f5b126f7a.mp4",
+    "static/media/background_rm.png": "/static/media/background_rm.842f893b0508e78834e1.png",
+    "static/media/belevedere-PhotoRoom.png-PhotoRoom.png": "/static/media/belevedere-PhotoRoom.png-PhotoRoom.a2cd64c16a10ae1487af.png",
+    "static/media/design.mp4": "/static/media/design.2482f4190557dabf7b61.mp4",
+    "static/media/snowy.gif": "/static/media/snowy.34b1b7118aba16e6ab1a.gif",
+    "static/media/merck.mp4": "/static/media/merck.a830f2f229896304d744.mp4",
+    "static/media/rmbg.png": "/static/media/rmbg.1a1c90b5f85ad7131c28.png",
+    "static/media/belevedere_front.png": "/static/media/belevedere_front.78cb95f5e21c453a5a40.png",
+    "static/media/blurred2.jpeg": "/static/media/blurred2.e5aef14de8b666af8216.jpeg",
+    "static/media/pfp1.jpg": "/static/media/pfp1.f0fa6a44c81318294642.jpg",
+    "static/media/stacked-waves-haikei (3).png": "/static/media/stacked-waves-haikei (3).012099f870b64053167c.png",
+    "static/media/logo2.png": "/static/media/logo2.fe22a04065b604ca88b7.png",
+    "static/media/Picture1.png": "/static/media/Picture1.6f553fb9a204e3aeb52c.png",
+    "index.html": "/index.html",
+    "main.2bea7868.css.map": "/static/css/main.2bea7868.css.map",
+    "main.c296e7d3.js.map": "/static/js/main.c296e7d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bea7868.css",
+    "static/js/main.c296e7d3.js"
+  ]
+}
