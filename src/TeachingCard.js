@@ -7,7 +7,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 function TeachingCard(props) {
     return (
         <div>
-            <Card sx={{ width: 550 }}>
+            <Card sx={{ width: "40vw", height: "calc(60px - 1vw)", minHeight: "calc(300px - 13vw)" }}>
                 <CardActionArea href={props.addr} target="_blank">
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div" sx={{textAlign: "left", fontWeight: "bold"}}>

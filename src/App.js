@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
 import footpic from './pics/Picture1.png';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Modal, Fade } from '@mui/material';
 import bg from './pics/stacked-waves-haikei (3).png';
 import Projects from './Projects.js';
@@ -12,8 +12,10 @@ import Teaching from './Teaching.js';
 function App() {
   const [menuStaggered, setMenuStaggered] = useState(false);
   const [modalVisible, setModalVisible] = useState(false);
+  const [pfpVisible, setPfpVisible] = useState(false);
 
   const filterBlurDimBG = { filter: modalVisible ? "blur(5px) brightness(50%)" : "none" };
+  const turnOffPfp = { display: pfpVisible ? "flex" : "none" };
 
   function toggleMenu() {
     setMenuStaggered(!menuStaggered);
@@ -24,6 +26,10 @@ function App() {
     setModalVisible(true);
   }
 
+  useEffect(() => {
+    setPfpVisible(window.innerWidth > 768);
+  }, [window.innerWidth, pfpVisible, modalVisible]);
+
   return (
     <div className="App">
       <div id="wrapper">
@@ -33,13 +39,13 @@ function App() {
             <img src={require('./pics/logo2.png')} style={{ height: '80%' }} alt="logo" class="logo"/>
           </div>
           <div id="nav-social-section" class="nav-section">
-            <a href="https://soundcloud.com/jameti" className="soundcloud">
+            <a href="https://soundcloud.com/jameti" className="soundcloud" target="_blank">
               <FontAwesomeIcon icon={faSoundcloud}/>
             </a>
-            <a href="https://github.com/jameswbaker" className="github">
+            <a href="https://github.com/jameswbaker" className="github" target="_blank">
               <FontAwesomeIcon icon={faGithub}/>
             </a>
-            <a href="https://www.linkedin.com/in/james-baker-4694b7206/" className="linkedin">
+            <a href="https://www.linkedin.com/in/james-baker-4694b7206/" className="linkedin" target="_blank">
               <FontAwesomeIcon icon={faLinkedinIn}/>
             </a>
             <div style={{width:"30px"}}>
@@ -140,7 +146,7 @@ function App() {
                 </div>
               </div>
               
-              <img src={require("./pics/pfp1.jpg")} id="pfp"></img>
+              <img src={require("./pics/pfp1.jpg")} id="pfp" style={turnOffPfp}></img>
 
             </div>
           </div>

@@ -264,6 +264,7 @@ h4:hover {
 #about-section {
   background-color: #6384a4;
   width: 80%;
+  min-width: "350px";
   border-radius: 10px;
   
   padding: 40px 70px 40px 70px;
@@ -274,7 +275,7 @@ h4:hover {
 }
 
 #about-subtext {
-  font-size: calc(1.5vw);
+  font-size: calc(15px + 0.5vw);
 }
 
 #pfp {
