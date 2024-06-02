@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6a25af2c.css",
-    "main.js": "/static/js/main.27815014.js",
+    "main.css": "/static/css/main.72a8db77.css",
+    "main.js": "/static/js/main.303b3ea0.js",
     "static/media/MiniMinecraft2.mp4": "/static/media/MiniMinecraft2.9db8afb18d6f43b66e52.mp4",
     "static/media/SquishModel2.mp4": "/static/media/SquishModel2.46894f89822a98ae216f.mp4",
     "static/media/arxiv_demo.mov": "/static/media/arxiv_demo.2dc34f9e27ca03896452.mov",
@@ -22,11 +22,11 @@
     "static/media/logo2.png": "/static/media/logo2.fe22a04065b604ca88b7.png",
     "static/media/Picture1.png": "/static/media/Picture1.6f553fb9a204e3aeb52c.png",
     "index.html": "/index.html",
-    "main.6a25af2c.css.map": "/static/css/main.6a25af2c.css.map",
-    "main.27815014.js.map": "/static/js/main.27815014.js.map"
+    "main.72a8db77.css.map": "/static/css/main.72a8db77.css.map",
+    "main.303b3ea0.js.map": "/static/js/main.303b3ea0.js.map"
   },
   "entrypoints": [
-    "static/css/main.6a25af2c.css",
-    "static/js/main.27815014.js"
+    "static/css/main.72a8db77.css",
+    "static/js/main.303b3ea0.js"
   ]
 }

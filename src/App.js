@@ -17,6 +17,8 @@ function App() {
   const filterBlurDimBG = { filter: modalVisible ? "blur(5px) brightness(50%)" : "none" };
   const turnOffPfp = { display: pfpVisible ? "flex" : "none" };
 
+  const [lineHeight, setLineHeight] = useState({});
+
   function toggleMenu() {
     setMenuStaggered(!menuStaggered);
   };
@@ -28,7 +30,17 @@ function App() {
 
   useEffect(() => {
     setPfpVisible(window.innerWidth > 768);
+    setLineHeight({ lineHeight: window.innerWidth > 768 ? "" : "1.1" });
   }, [window.innerWidth, pfpVisible, modalVisible]);
+
+  const [isChrome, setIsChrome] = useState(false);
+  const [isSafari, setIsSafari] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent.toLowerCase();
+    setIsChrome(userAgent.includes('chrome') && !userAgent.includes('edg'));
+    setIsSafari(userAgent.includes('safari') && !userAgent.includes('chrome') && !userAgent.includes('crios'));
+  }, []);
 
   return (
     <div className="App">
@@ -85,7 +97,7 @@ function App() {
         <div id="home" className="anchor" style={{ position: "relative", top: "-500px"}}></div>
 
         <div class="titles" style={{ filter: modalVisible ? "blur(5px)" : "none" }}>
-          <h1 class="title">James Baker</h1>
+          <h1 class="title" style={lineHeight}>James Baker</h1>
           <h2 class="subtitle"> 
             Welcome to my portfolio. <br />
             
@@ -105,24 +117,21 @@ function App() {
           <img src={require('./pics/background-removed/belevedere_front.png')} alt="ForeForeground" class="foreforeground" style={filterBlurDimBG}/>
         </header>
 
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
+        {isChrome && <br />}
 
         <section className="cover1" style={filterBlurDimBG}>
           <div id="about" class="anchor"></div>

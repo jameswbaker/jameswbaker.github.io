@@ -46,7 +46,7 @@ nav > .nav-section {
 }
 
 #nav-logo-section, #nav-menu-section {
-  flex-basis: calc(100vw / 8);
+  width: 100px;
 }
 
 #nav-menu-section {
